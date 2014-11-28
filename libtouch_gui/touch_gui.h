@@ -210,7 +210,7 @@ extern int batt_clock_code[4]; // color code for battery and clock
 /****************************************/
 /*   Start support for theme settings   */
 /****************************************/
-#define PHILZ_MAGENTA_THEME true
+#define PHILZ_BLACK_THEME true
 
 // PhilZ Touch 4 Black Theme
 #ifdef PHILZ_BLACK_THEME
