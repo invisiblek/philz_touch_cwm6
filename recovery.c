@@ -1246,6 +1246,14 @@ main(int argc, char **argv) {
             printf("(replacing path \"%s\" with \"%s\")\n",
                    update_package, modified_path);
             update_package = modified_path;
+        } else if (strncmp(update_package, "/sdcard/", 8) == 0) {
+            int len = strlen(update_package) + 12;
+            char* modified_path = (char*)malloc(len);
+            strlcpy(modified_path, "/data/media/", len);
+            strlcat(modified_path, update_package + 8, len);
+            printf("(replacing path \"%s\" with \"%s\")\n",
+                   update_package, modified_path);
+            update_package = modified_path;
         }
     }
     printf("\n");
